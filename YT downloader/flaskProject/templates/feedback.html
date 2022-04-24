@@ -1,0 +1,134 @@
+<!DOCTYPE html>    
+<html lang="">
+<head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-
++0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgb(70, 68, 68);
+  border-radius: 4px;
+  resize: vertical;
+}
+input[type=email], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgb(70, 68, 68);
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: rgb(37, 116, 161);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+    border-left: 10px solid blue;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 900px;
+  margin-top: 6px;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.h2{
+    font-family: "Courier New", Monospace, serif;
+	font-size: 30px;
+
+}
+
+
+</style>
+    <title></title>
+</head>
+<body>
+<h2 class="h2">Feedback</h2>
+<div class="container">
+  <form action="feedback.html" method="POST">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">Your Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="name" placeholder="Your name.."><br>
+      </div>
+    </div>
+
+    <div class="row">
+        <div class="col-25">
+          <label for="email">Email</label>
+        </div>
+        <div class="col-75">
+          <input type="email" id="email" name="email" placeholder="Your mail id..">
+        </div>
+      </div>
+    <div class="row">
+      <div class="col-25">
+
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="feed_back">Comments</label>
+      </div>
+      <div class="col-75">
+          <label for="subject"><textarea id="subject" name="comments" placeholder="Write something.." style="width:900px"></textarea>
+              </label>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <input type="submit" name="submit" value="Submit">
+    </div>
+  </form>
+</div>
+
+
+
+
+
+
+</body>
+</html> 

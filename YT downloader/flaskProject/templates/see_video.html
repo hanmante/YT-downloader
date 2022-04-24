@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="">
+<style>
+    .chbox{
+        	width: 380px;
+		height: 40px;
+		border-radius: 10px;
+    }
+    .bttn{
+          background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 10px;
+    }
+    	.bttn:hover {
+  background-color: #0C6E97;
+}
+        .imgg{
+            margin-top: 100px;
+        }
+</style>
+
+
+    <body>
+     <div style="text-align: center;" >
+         <a target="index.html" href="https://www.youtube.com/" >
+      <img class="imgg" src="{{ url_for('static', filename='gg.png') }}" alt="text" >
+    </a>
+         <form action="{{ url_for('see_video') }}" method="POST">
+             <h3>{{ url.title }}</h3><br> <br>
+             <label>
+                 <select class="chbox" name="itag">
+                        {% for i in url.streams %}
+                            <option value="{{ i.itag }}"> {{ i.mime_type }}  {{ i.resolution }}</option>
+                        {% endfor %}
+                    </select>
+             </label>
+
+            <input class="bttn" type="submit" value="download">
+        </form>
+     </div>
+    </body>
+</html>
